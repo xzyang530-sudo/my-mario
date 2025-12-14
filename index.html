@@ -10,8 +10,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            background-color: #000; /* 背景全黑，更有沉浸感 */
-            overflow: hidden; /* 隐藏滚动条 */
+            background-color: #000;
+            overflow: hidden;
         }
         #game-container {
             width: 100%;
@@ -20,7 +20,6 @@
             justify-content: center;
             align-items: center;
         }
-        /* 确保模拟器画面自动缩放 */
         #game {
             width: 100% !important;
             height: 100% !important;
@@ -40,8 +39,11 @@
         EJS_core = 'nes';
         EJS_gameUrl = 'mario.nes'; 
         EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
-        EJS_startOnLoaded = true;
-        EJS_backgroundColor = '#000000'; // 模拟器内部背景也设为黑
+        
+        // 修改这里：关闭自动开始，必须手动点击才能玩，这样才有声音
+        EJS_startOnLoaded = false; 
+        
+        EJS_backgroundColor = '#000000';
     </script>
     
     <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
