@@ -2,22 +2,30 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>我的超级玛丽</title>
     <style>
-        body {
+        body, html {
             margin: 0;
-            background-color: #202020;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000; /* 背景全黑，更有沉浸感 */
+            overflow: hidden; /* 隐藏滚动条 */
+        }
+        #game-container {
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            color: white;
-            font-family: Arial, sans-serif;
         }
-        #game-container {
-            width: 640px;
-            height: 480px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        /* 确保模拟器画面自动缩放 */
+        #game {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
@@ -29,10 +37,11 @@
 
     <script>
         EJS_player = '#game';
-        EJS_core = 'nes'; // 指定核心为 NES (红白机)
-        EJS_gameUrl = 'mario.nes'; // 这里必须和你上传的游戏文件名完全一致！
-        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/'; // 使用官方CDN数据
-        EJS_startOnLoaded = true; // 加载完直接开始
+        EJS_core = 'nes';
+        EJS_gameUrl = 'mario.nes'; 
+        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+        EJS_startOnLoaded = true;
+        EJS_backgroundColor = '#000000'; // 模拟器内部背景也设为黑
     </script>
     
     <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
