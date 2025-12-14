@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的超级玛丽</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #202020;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            width: 640px;
+            height: 480px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="game"></div>
+    </div>
+
+    <script>
+        EJS_player = '#game';
+        EJS_core = 'nes'; // 指定核心为 NES (红白机)
+        EJS_gameUrl = 'mario.nes'; // 这里必须和你上传的游戏文件名完全一致！
+        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/'; // 使用官方CDN数据
+        EJS_startOnLoaded = true; // 加载完直接开始
+    </script>
+    
+    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+</body>
+</html>
